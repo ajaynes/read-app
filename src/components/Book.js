@@ -1,4 +1,6 @@
 import React from "react";
+import { Link } from "react-router-dom";
+
 const Book = props => {
   const { images, book, updateShelf, currentShelf, title, authors } = props;
   return (
@@ -30,6 +32,7 @@ const Book = props => {
         </div>
         <div className="book-title">{title}</div>
         <div className="book-authors">{authors}</div>
+        <Link to={{pathname: '/details', state: book}}><button className="btn">View Details</button></Link>
       </div>
     </li>
   );

@@ -37,6 +37,7 @@ class Search extends Component {
   };
 
   render() {
+    const {queryResults} = this.state;
     return (
       <div className="search-books">
         <div className="search-books-bar">
@@ -53,12 +54,12 @@ class Search extends Component {
           </div>
         </div>
         <div className="search-books-results">
-          {this.state.queryResults === undefined ||
-          this.state.queryResults.length === 0 ? (
+          {queryResults === undefined ||
+          queryResults.length === 0 ? (
             <div>No results</div>
           ) : (
             <ol className="books-grid">
-              {this.state.queryResults.map(result => (
+              {queryResults.map(result => (
                 <li key={result.id}>
                   <div className="book">
                     <div className="book-top">
