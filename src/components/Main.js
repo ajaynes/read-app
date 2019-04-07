@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
 import * as BooksAPI from "../BooksAPI";
 import Bookshelf from "./BookShelf";
 import AddBtn from "./AddBtn";
@@ -50,9 +49,9 @@ class Main extends Component {
           updateShelf={this.updateShelf}
         />
 
-        <Link to="/search">
+
           <AddBtn />
-        </Link>
+
 
       </>
     );

@@ -33,6 +33,7 @@ const Book = props => {
         <div className="book-title">{title}</div>
         <div className="book-authors">{authors}</div>
         <Link to={{pathname: '/details', state: book}}><button className="btn">View Details</button></Link>
+        {/* got direction from: https://tylermcginnis.com/react-router-pass-props-to-link/ */}
       </div>
     </li>
   );
