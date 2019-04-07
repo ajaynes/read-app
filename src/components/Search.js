@@ -11,20 +11,20 @@ class Search extends Component {
   updateQuery = query => {
     this.setState({ query });
     this.updateQueryResults(query);
-  };
-
-  updateQueryResults = query => {
-    if (query) {
-      BooksAPI.search(query).then(queryResults => {
-        if (queryResults.error) {
-          this.setState({ queryResults: [] });
-        } else {
-          this.setState({ queryResults });
-        }
-      });
-    } else {
-      this.setState({ queryResults: [] });
-    }
+  }
+  updateQueryResults = (query) => {
+    query ?
+      (BooksAPI.search(query)
+        .then((queryResults) => {
+          (queryResults.error) ? this.setState({
+            queryResults: []
+          }): this.setState({
+            queryResults
+          });
+        })) :
+      this.setState({
+        queryResults: []
+      })
   };
   updateShelf = (book, shelf) => {
     book.shelf = shelf;
@@ -37,8 +37,6 @@ class Search extends Component {
   };
 
   render() {
-    console.log(this.state);
-    console.log(this.state.queryResults);
     return (
       <div className="search-books">
         <div className="search-books-bar">
@@ -64,6 +62,8 @@ class Search extends Component {
                 <li key={result.id}>
                   <div className="book">
                     <div className="book-top">
+                      {result.imageLinks === undefined ? <div>No image found</div> :
+
                       <div
                         className="book-cover"
                         style={{
@@ -74,6 +74,7 @@ class Search extends Component {
                           })`
                         }}
                       />
+                        }
                       <div className="book-shelf-changer">
                         <select
                           onChange={event =>

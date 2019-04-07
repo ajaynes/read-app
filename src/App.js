@@ -6,13 +6,6 @@ import Search from "./components/Search";
 import "./App.css";
 
 class BooksApp extends Component {
-  updateShelf = (book, shelf) => {
-    book.shelf = shelf;
-    this.setState(state => ({
-      books: state.books.filter(b => b.id !== book.id).concat([book])
-    }));
-    BooksAPI.update(book, shelf);
-  };
 
   render() {
     return (

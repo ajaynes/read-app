@@ -31,10 +31,9 @@ class Main extends Component {
             <h1>MyReads</h1>
           </div>
         </div>
+
         <Bookshelf
-          books={this.state.books.filter(
-            book => book.shelf === "currentlyReading"
-          )}
+          books={this.state.books.filter(book => book.shelf === "currentlyReading")}
           title={"Currently Reading"}
           updateShelf={this.updateShelf}
         />
@@ -50,9 +49,11 @@ class Main extends Component {
           title={"Read"}
           updateShelf={this.updateShelf}
         />
+
         <Link to="/search">
           <AddBtn />
         </Link>
+
       </>
     );
   }
