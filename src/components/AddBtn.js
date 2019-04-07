@@ -3,7 +3,7 @@ import React from "react";
 const AddBtn = props => {
   return (
     <div className="open-search">
-      <button onClick={() => this.setState({ showSearchPage: true })}>
+      <button onClick={() => console.log("just a placeholder")}>
         Add a book
       </button>
     </div>

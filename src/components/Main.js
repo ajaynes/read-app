@@ -1,7 +1,7 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 import * as BooksAPI from "../BooksAPI";
 import Bookshelf from "./BookShelf";
-import Search from "./Search";
 import AddBtn from "./AddBtn";
 
 class Main extends Component {
@@ -17,10 +17,13 @@ class Main extends Component {
     });
   }
   updateShelf = (book, shelf) => {
+    book.shelf = shelf;
+    this.setState(state => ({
+      books: state.books.filter(b => b.id !== book.id).concat([book])
+    }));
     BooksAPI.update(book, shelf);
   };
   render() {
-    console.log(this.state.books);
     return (
       <>
         <div className="list-books">
@@ -47,9 +50,9 @@ class Main extends Component {
           title={"Read"}
           updateShelf={this.updateShelf}
         />
-
-        {/*<Search />*/}
-        <AddBtn />
+        <Link to="/search">
+          <AddBtn />
+        </Link>
       </>
     );
   }

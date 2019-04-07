@@ -16,7 +16,9 @@ const Bookshelf = props => {
                     title={book.title}
                     authors={book.authors}
                     images={book.imageLinks.smallThumbnail}
+                    currentShelf={book.shelf}
                     updateShelf={props.updateShelf}
+                    book={book}
                   />
                 ))}
               </ol>
