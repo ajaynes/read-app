@@ -2,13 +2,13 @@
 
 This application is a book categorizer and book search app similar to Goodreads. One can move books into 3 categories: Want to Read, Currently Reading, and Read.
 
-![alt text](src/screenshots/udacity-bookreads-shelves "Main page with categorized books")
+![alt text](https://github.com/ajaynes/read-app/blob/master/src/screenshots/udacity-bookreads-shelves.png "Main page with categorized books")
 
 One can also add more books to these shelves by searhing for them and then setting the book to the corresponding shelf.
-![alt text](src/screenshots/udacity-bookreads-search "Search for books and add them to shelves")
+![alt text](https://github.com/ajaynes/read-app/blob/master/src/screenshots/udacity-bookreads-search.png "Search for books and add them to shelves")
 
 Additionally, a user can click a button below the books on shelves to get some details.
-![alt text](src/screenshots/udacity-bookreads-details "See book details")
+![alt text](https://github.com/ajaynes/read-app/blob/master/src/screenshots/udacity-bookreads-details.png "See book details")
 
 ## TL;DR
 
