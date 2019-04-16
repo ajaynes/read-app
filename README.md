@@ -7,9 +7,6 @@ This application is a book categorizer and book search app similar to Goodreads.
 One can also add more books to these shelves by searhing for them and then setting the book to the corresponding shelf.
 ![alt text](https://github.com/ajaynes/read-app/blob/master/src/screenshots/udacity-bookreads-search.png "Search for books and add them to shelves")
 
-Additionally, a user can click a button below the books on shelves to get some details.
-![alt text](https://github.com/ajaynes/read-app/blob/master/src/screenshots/udacity-bookreads-details.png "See book details")
-
 ## TL;DR
 
 To get started developing right away:
