@@ -5,10 +5,8 @@ const AddBtn = props => {
   return (
     <div className="open-search">
       <Link to="/search">
-      <button>
-        Add a book
-      </button>
-    </Link>
+        <button>Add a book</button>
+      </Link>
     </div>
   );
 };
