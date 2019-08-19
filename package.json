@@ -2,6 +2,7 @@
   "name": "myreads-app",
   "version": "0.1.0",
   "private": true,
+  "homepage": "/readapp",
   "dependencies": {
     "prop-types": "^15.6.2",
     "react": "^16.6.3",

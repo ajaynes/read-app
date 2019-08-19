@@ -31,7 +31,7 @@ class BooksApp extends React.Component {
     return (
       <div className="app">
         <div className="list-books">
-          <BrowserRouter>
+          <BrowserRouter basename={process.env.PUBLIC_URL}>
             <Switch>
               <Route
                 exact
